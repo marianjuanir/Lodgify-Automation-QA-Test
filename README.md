@@ -1,74 +1,59 @@
-Open Lodgify-Automation-QA-Test as a project to get started
+## Instructions
 
-The following instructions use Bash, so make sure to install Git Bash before running the commands.
+1. To run your test, you should put test files inside "cypress/e2e/testName.cy.js"
+2. Run the tests with:
+   `$ "npm run cy:run"`
+3. You should be able to run and check tests results with these steps, now you can proceed with the requirements below.
+4. You can create folders for selectors anywhere, the whole structure is up to you, try not to hardcode and create a clean test structure.
+5. Make sure to do smart waits in case of slowness on services.
+6. Tests should be able to run on any environment.
 
-1. Download Node.js from https://nodejs.org/es/download/ and then execute "$ npm run install-all". 
-2. You will need to start a local server to run tests, execute "$ npm run dev-server" in a different terminal, leave this terminal open.
-3. To run your test, you should test files inside "cypress/integration/testName.test.js" (where "testName" is the name of the test you're adding).
-4. Run the tests with $ "npm run cy:run"
-5. You should be able to run and check tests results with these steps, now you can proceed with the requirements below, which you will also find in the Test file.
-6. You can create folders for selectors anywhere, the whole structure is up to you, try not to hardcode and create a clean test structure.
-7. Make sure to do smart waits in case slowness on services.
-8. Tests should be able to run on any environment.
+## How we would like to receive the solution?
 
-## How we'd like to receive the solution?
+Clone this repository and upload it as a new public repository in your GitHub account. Create a pull request with the requested functionality and share PR's link with us.
 
-Clone this repository and upload it as a new public repository in your GitHub account
-Create a new branch in your repository
-Create a pull request with the requested functionality to unchanged master branch in your repository
-Share link to the PR with us
+Do not send a PR on this repository.
 
-Quick start commands:
-## Installing
-```
-$ npm run install-all
-```
-## Starting mock up server (leave a terminal open for this command, and run the test in another terminal)
-```
-$ npm run dev-server
+# Challenge Requirements
 
-Note: by default, server.js is using your port 8080, feel free to change it in case you're using it for something else, port 3000 would also be a good alternative. (node server/server.js)
-```
-## Execute Tests
-```
-$ npm run cy:run
-```
+### Lodgify Pricing Page
 
-Challengue Requirements:
+- Add a test to verify that the monthly plan selecting 50 rentals displays:
+  $85 for Starter plan
+  $472 for Professional plan
+  $770 for Ultimate plan
+- Add a test to verify that the change of currency properly changes the currency of the pricing options. The way you do so, and the extra verification steps are up to you.
 
-Two HTML files are provided:
+- Validate that clicking Get Started it redirects to signUp flow.
 
-*Pricing page: This page allows the users to select different pricing options.
-*Contact page: This page allows the users to fill a form and then send an email.
+- Validate Benefit's list are different between plans.
 
-These simpler version of those pages will require you to add the following tests:
+- Using your own criteria, add tests according to what you think should be important to cover in this page. (Optional)
 
-Steps:
+> URL to pricing page -> https://www.lodgify.com/pricing/
 
-1. On "Lodgify Pricing" page, add a test to verify that the "Yearly" plan selecting 50 rentals displays: 
-   $64 for Starter plan
-   $375 for Professional plan
-   $525 for Ultimate plan
-2. On "Lodgify Pricing" page, add a test to verify that the change of currency (located just below the pricing options) properly changes the currency of the pricing options. 
-   The way you do so, and the extra verification steps are up to you (such as verifying the currency price difference)
-3. Using your own criteria, add tests according to what you think should be important to cover in this page "Lodgify Pricing". (Optional)
-4. On "Contact" page, add a test to verify that the field validations appear according to the following requirements. 
-   "Name" is mandatory and a message should be displayed in case this field is left empty
-   "Phone number" is mandatory and a message should be displayed in case this field is left empty
-   "Email address" is mandatory and a message should be displayed in case this field is left empty
-   "Comment" is mandatory and a message should be displayed in case this field is left empty
-   This test should pick the date of arrival "April 14th" and date of departure "June 14" to verify the datepicker is working as expected
-   This test should also add a random Lorem Ipsum of your choice to "Comment" field
-5. Using your own criteria, add tests according to what you think should be important to cover in this page "Contact". (Optional)
+### Lodgify Contact Page
 
+- Add a test to verify field validations appears:
+  Name, Phone Number, Email address, Comment are mandatories and a message should be displayed in case any of these fields are empty.
+- Pick the date range of 5 days for next year to verify the date picker is working properly.
+- Using your own criteria, add tests according to what you think should be important to cover in this page.
 
-IMPORTANT NOTE: Some tests, if followed the requirements correctly, will fail. For those, add an example of a bug report in the test document. 
+> URL to contact page: https://npreview-all-properties.lodgify.com/en/contact-us
 
+### Rental page
 
-## Troubleshooting
+This will be an E2E test case:
 
-Using the provided steps, everything should work as explained, if not, make sure your Node.js is updated. In case you have any issues with Cypress.io, you can always install another test framework. In these cases, please also add extra information in the README. 
+- Validate each section is correctly displayed.
+- Validate Add a review button works properly.
+- Currency dropdown works correctly and currencies are changed all over the page.
+- Pick a date range of 6 days and validate the price changes on "Book for" button.
+- Select 4 guests.
+- Click Book for button.
+- Check it redirects to checkout page.
+- Validate the dates and number of guests are correct.
+- Go to Step 3 and validate Summary tab
+- Fill the Guest Details form and click Request to Book.
 
-In case you change your configuration, make sure to change your package.json file to run accordingly to avoid any kind of troubles or incompatibilities.
-
-Good luck!
+> URL to rental page: https://npreview-all-properties.lodgify.com/en/first-rental
