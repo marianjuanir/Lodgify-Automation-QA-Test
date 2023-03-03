@@ -1,0 +1,44 @@
+{
+    "usd": {
+        "monthly" : {
+            "10" : {
+                "starter" : "54",
+                "professional" : "168",
+                "ultimate" : "257"
+            },
+            "50" : {
+                "starter" : "85",
+                "professional" : "472",
+                "ultimate" : "770"
+            }
+        }
+    },
+    "eur": {
+        "monthly" : {
+            "10" : {
+                "starter" : "44",
+                "professional" : "139",
+                "ultimate" : "213"
+            },
+            "50" : {
+                "starter" : "73",
+                "professional" : "435",
+                "ultimate" : "666"
+            }
+        }
+    },
+    "gbp": {
+        "monthly" : {
+            "10" : {
+                "starter" : "41",
+                "professional" : "123",
+                "ultimate" : "198"
+            },
+            "50" : {
+                "starter" : "68",
+                "professional" : "383",
+                "ultimate" : "619"
+            }
+        }
+    }
+}
